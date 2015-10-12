@@ -17,6 +17,7 @@ defmodule TddDeathStar.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/planets", PlanetController
   end
 
   # Other scopes may use custom stacks.
