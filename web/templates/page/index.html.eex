@@ -1,6 +1,6 @@
 <div class="jumbotron">
-  <h2>Welcome to Phoenix!</h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+  <h2>Welcome to The Death Star!</h2>
+  <%= link "Target Planet",to: planet_path(@conn, :new)%>
 </div>
 
 <div class="row marketing">
