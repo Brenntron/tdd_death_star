@@ -1,0 +1,33 @@
+<h2>Show planet</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @planet.name %>
+  </li>
+
+  <li>
+    <strong>X:</strong>
+    <%= @planet.x %>
+  </li>
+
+  <li>
+    <strong>Y:</strong>
+    <%= @planet.y %>
+  </li>
+
+  <li>
+    <strong>Z:</strong>
+    <%= @planet.z %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @planet.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: planet_path(@conn, :edit, @planet) %>
+<%= link "Back", to: planet_path(@conn, :index) %>

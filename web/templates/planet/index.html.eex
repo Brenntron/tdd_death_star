@@ -1,0 +1,35 @@
+<h2>Listing planets</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for planet <- @planets do %>
+  <tr>
+      <td><%= planet.name %></td>
+      <td><%= planet.x %></td>
+      <td><%= planet.y %></td>
+      <td><%= planet.z %></td>
+      <td><%= planet.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: planet_path(@conn, :show, planet), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: planet_path(@conn, :edit, planet), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: planet_path(@conn, :delete, planet), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New planet", to: planet_path(@conn, :new) %>
+<%= link "Control Room", to: page_path(@conn, :index) %>

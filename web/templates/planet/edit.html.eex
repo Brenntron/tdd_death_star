@@ -1,0 +1,6 @@
+<h2>Edit planet</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: planet_path(@conn, :update, @planet) %>
+
+<%= link "Back", to: planet_path(@conn, :index) %>
