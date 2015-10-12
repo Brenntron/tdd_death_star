@@ -2,7 +2,7 @@ defmodule TddDeathStar.PlanetControllerTest do
   use TddDeathStar.ConnCase
 
   alias TddDeathStar.Planet
-  @valid_attrs %{name: "Alderaan", description: "A nice little planet that is totally not rebeling.", destroyed: false, x: 42, y: 42, z: 42}
+  @valid_attrs %{name: "Alderaan", description: "A nice little planet that is totally not rebelling.", destroyed: false, x: 42, y: 42, z: 42}
   @invalid_attrs %{}
 
   setup do
