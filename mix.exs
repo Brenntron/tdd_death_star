@@ -25,7 +25,7 @@ defmodule TddDeathStar.Mixfile do
                     :phoenix_ecto, :postgrex]
   end
 
-  def app_list(:test), do: [:hound | app_list]
+  def app_list(:test), do: app_list(:all) ++ [:hound, :blacksmith]
   def app_list(_), do: app_list
 
   # Specifies which paths to compile per environment
@@ -42,6 +42,8 @@ defmodule TddDeathStar.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:hound, "~> 0.7.2", only: :test}]
+     {:hound, "~> 0.7.2", only: :test},
+     {:blacksmith, "~> 0.1.2"},
+     {:faker, " ~> 0.5.1",}]
   end
 end
