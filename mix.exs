@@ -17,9 +17,16 @@ defmodule TddDeathStar.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {TddDeathStar, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex, :hound]]
+     applications: app_list(Mix.env)]
   end
+
+  def app_list do
+    [:phoenix, :phoenix_html, :cowboy, :logger,
+                    :phoenix_ecto, :postgrex]
+  end
+
+  def app_list(:test), do: [:hound | app_list]
+  def app_list(_), do: app_list
 
   # Specifies which paths to compile per environment
   defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
@@ -35,6 +42,6 @@ defmodule TddDeathStar.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:hound, "~> 0.7.2"}]
+     {:hound, "~> 0.7.2", only: :test}]
   end
 end

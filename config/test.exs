@@ -4,7 +4,9 @@ use Mix.Config
 # you can enable the server option below.
 config :tdd_death_star, TddDeathStar.Endpoint,
   http: [port: 4001],
-  server: false
+  server: true
+
+config :hound, driver: "selenium"
 
 # Print only warnings and errors during test
 config :logger, level: :warn
