@@ -28,4 +28,3 @@ config :phoenix, :generators,
   migration: true,
   binary_id: false
 
-config :hound, driver: "selenium"
