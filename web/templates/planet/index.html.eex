@@ -24,7 +24,7 @@
       <td class="text-right">
         <%= link "Show", to: planet_path(@conn, :show, planet), class: "btn btn-default btn-xs" %>
         <%= link "Edit", to: planet_path(@conn, :edit, planet), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: planet_path(@conn, :delete, planet), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+        <%= link "Delete", to: planet_path(@conn, :delete, planet), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger delete btn-xs" %>
       </td>
     </tr>
 <% end %>
