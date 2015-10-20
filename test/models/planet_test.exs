@@ -15,4 +15,21 @@ defmodule TddDeathStar.PlanetTest do
     changeset = Planet.changeset(%Planet{}, @invalid_attrs)
     refute changeset.valid?
   end
+
+  test "changeset with wrong numbers" do
+    attrs = %{@valid_attrs | x: -42}
+    changeset = Planet.changeset(%Planet{}, attrs)
+    refute changeset.valid?
+  end
+
+  test "Changeset with short description" do
+    attrs = %{@valid_attrs | description: "I"}
+    changeset = Planet.changeset(%Planet{}, attrs)
+    refute changeset.valid?
+  end
+
+  test "Changeset without description" do
+    changeset = Planet.changeset(%Planet{}, Map.delete(@valid_attrs, :description))
+    assert changeset.valid?
+  end
 end
