@@ -1,5 +1,6 @@
 <div class="jumbotron">
   <h2>Welcome to The Death Star!</h2>
-  <%= link "Target Planet",to: planet_path(@conn, :new)%>
+  <%= link "Target Planet",to: planet_path(@conn, :new), class: "target-planet"%>
+  <%= link "Target List", to: planet_path(@conn, :index), class: "target-list"%>
 </div>
 
