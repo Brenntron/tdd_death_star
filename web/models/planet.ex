@@ -27,5 +27,6 @@ defmodule TddDeathStar.Planet do
     |> validate_number(:x, greater_than: 0, less_than: 1000)
     |> validate_number(:y, greater_than: 0, less_than: 1000)
     |> validate_number(:z, greater_than: 0, less_than: 1000)
+    |> validate_length(:description, min: 2)
   end
 end
