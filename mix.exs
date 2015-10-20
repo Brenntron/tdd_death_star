@@ -43,7 +43,7 @@ defmodule TddDeathStar.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:hound, "~> 0.7.2", only: :test},
-     {:blacksmith, "~> 0.1.2"},
-     {:faker, " ~> 0.5.1",}]
+     {:blacksmith, "~> 0.1.2", only: :test},
+     {:faker, " ~> 0.5.1", only: :test}]
   end
 end
