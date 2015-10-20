@@ -12,8 +12,8 @@ defmodule TddDeathStar.Planet do
     timestamps
   end
 
-  @required_fields ~w(x y z description name)
-  @optional_fields ~w()
+  @required_fields ~w(name x y z destroyed)
+  @optional_fields ~w(description)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
